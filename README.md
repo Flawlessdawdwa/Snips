@@ -2,6 +2,56 @@
 
 A React Native mobile application built for the Senior Mobile Developer technical assessment at Snips. The app features a Netflix-style home page and a TikTok-like video feed with smooth scrolling and responsive design.
 
+## Technical Stack Overview
+
+### State Management
+- **TanStack Query (React Query)**: Used for server state management, data fetching, caching, and synchronization. Provides automatic background refetching, optimistic updates, and intelligent caching strategies.
+
+### Navigation
+- **React Navigation**: Native stack navigator for seamless navigation between screens with native performance and gestures.
+
+### Styling
+- **React Native StyleSheet**: Native styling solution for optimal performance with platform-specific optimizations.
+
+### Data Fetching & API
+- **TanStack Query**: Handles all API calls with built-in error handling, retry logic, and caching mechanisms.
+- **Custom Services**: Modular service layer for API endpoints (homepage, feedpage).
+
+### Video Player
+- **react-native-video**: High-performance video player for TikTok-like scrolling experience with optimized buffering and playback controls.
+
+### Development Tools
+- **Reactotron**: Debugging tool for monitoring network requests, state changes, and console logs in development.
+- **React Native SVG Transformer**: For rendering and transforming SVG icons and graphics.
+
+## Key Architectural Decisions
+
+1. **Service-Oriented Architecture**: Separated API logic into dedicated service modules for better maintainability and testability.
+
+2. **Type-Safe Development**: Implemented TypeScript types for all API responses and data models to ensure type safety throughout the application.
+
+3. **Custom Hooks Pattern**: Created custom hooks (e.g., `useHomepage`, `useFeedpage`) to encapsulate data fetching logic and provide clean component APIs.
+
+4. **Modular Page Structure**: Organized features into separate pages (HomePage, FeedPage, ProfilePage, SearchPage) for better code organization and lazy loading capabilities.
+
+5. **Optimized Video Scrolling**: Implemented TikTok-like vertical video scrolling with preloading and memory management for smooth performance.
+
+## Libraries Used
+
+- **@tanstack/react-query**: Server state management and data synchronization
+- **react-navigation/native**: Navigation framework
+- **react-navigation/native-stack**: Stack navigation
+- **react-native-video**: Video playback component
+- **react-native-svg**: SVG rendering
+- **react-native-svg-transformer**: SVG asset transformation
+- **reactotron-react-native**: Development debugging tool
+
+## Assumptions
+
+- The app is designed for both iOS and Android platforms with React Native 0.83.1.
+- API endpoints follow RESTful conventions and return JSON responses.
+- Video content is optimized for mobile streaming with appropriate formats and bitrates.
+ - Users have stable internet connectivity for video streaming functionality.
 # Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
